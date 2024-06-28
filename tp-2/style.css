@@ -1,0 +1,82 @@
+/*Camila Luna 7mo 4ta 
+/* 1) Agregar una regla para definir el color de fondo del documento en #222, y el color del texto en #ee6*/
+/* 3) Mostrar todos los párrafos con una fuente sans-serif. */
+body{
+    background-color: #222;
+    color: #ee6;
+    font-family: sans-serif;
+}
+
+/* 2)Agregar una regla para centrar el título principal del documento */
+h1{
+    text-align: center;
+}
+
+/* 4) Agregar una regla para mostrar en color #eee todos los títulos del documento */
+/* 11) Hacer que todos los títulos muestren su texto en mayúscula */
+h1,h2,h3{
+    color: #eee;
+    text-transform: uppercase;
+}
+
+/* 5) Agregar un borde inferior color blanco a todos los elementos <strong> */
+strong{
+    border-bottom: 1px solid #fff;
+}
+
+/* 6) Mostrar el fondo gris #444 y el texto en negrita para todos los elementos con la clase the-force */
+.the-force{
+    background-color: #444;
+    font-weight: 900;
+}
+
+/* 7) Mostrar el texto con color #66f para los elementos con la clase light-side, y color #f33 para la clase dark-side */
+.light-side{
+    color: #66f;
+}
+.dark-side{
+    color: #f33;
+}
+
+/* 8) Agregar la regla list-style-type: circle; a los elementos del listado con ID og-trilogy */
+#og-trilogy{
+    list-style-type: circle;
+}
+
+/* 9) Agregar padding-left al segundo listado de películas */
+ul.movies-list:nth-of-type(2){
+    padding-left: 200px;
+}
+
+/* 10) Agregar margin-top al último elemento del tercer listado de películas */
+ul.movies-list:last-of-type li:last-of-type{
+    margin-top: 20px; 
+}
+
+/* 12) Hacer que la primera linea del primer párrafo se muestre color #efe */
+p:first-of-type::first-letter{
+    color: #efe;
+}
+
+/* 13) Hacer que el título principal cambie de color cuando se pasa el puntero por encima */
+h1:hover{
+    color: #f00;
+}
+
+/* 14) Hacer que los links visitados cambien a color gris */
+a:visited{
+    color: #aaa;
+}
+
+/* 15) Mostrar los links sin atributo href en cursiva */
+a:not([href]){
+    font-style: italic;
+}
+
+/* 16) Mostrar de manera alternada el color de fondo de cada uno de los elementos de los listados de películas entre #111 y 333 */
+li:nth-child(odd){
+    background-color: #111;
+}
+li:nth-child(even){
+    background-color: #333;
+}
