@@ -1,0 +1,41 @@
+/*Camila Luna
+/* 1) Una regla para centrar el titulo <h1>.*/
+body h1.titulo{
+    text-align: center;
+}
+
+/* 2) Una regla para aplicar una fuente con serifas a todos los parrafos del documento.*/
+body p{
+    font-family: serif;
+}
+
+/* 3) Una regla para que el elemento con id #primer-parrafo tenga color de fondo #CEE.*/
+p#primer-parrafo{
+    background-color: #CEE;
+}
+
+/* 4) Una regla para cambiar el color a #933 para los elementos <em> del primer párrafo.*/
+body #primer-parrafo em{
+    color: #933;
+}
+
+/* 5) Una regla para que todos los links muestren outline.*/
+body a{
+    outline: 1px solid #333;
+}
+
+/* 6) Una regla para que el texto p.fuente tenga su opacidad en 100%.*/
+html body p.fuente.parrafo{
+    opacity: 100%;
+}
+
+/* 7) Una regla para que el texto del elemento p.fuente tenga color #000.*/
+html body p.fuente.parrafo{
+    color: #000 !important;
+}
+
+/* 8) Una regla para que el elemento con la clase .complicado aparezca en negrita y con color #C62.*/
+html body span.complicado{
+    font-weight: bold;
+    color: #c62 !important;
+}
