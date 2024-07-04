@@ -15,6 +15,18 @@
 
                 <p class="texto" id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum auctor libero, vel imperdiet est. Etiam blandit facilisis ex, nec cursus metus pharetra quis. Fusce imperdiet nisl nibh, ac aliquet ante elementum vitae.</p>
 
+                <!-- Nuevo campo de entrada y botón para actualizar el texto -->
+                <div class="input-group my-3">
+                    <input type="text" id="nuevo-texto" class="form-control" placeholder="Escribe un nuevo texto">
+                    <button id="btn-actualizar" class="btn btn-primary">Actualizar Texto</button>
+                </div>
+                
+                <!-- Nuevo campo de entrada y botón para modificar el tamaño del texto -->
+                <div class="input-group my-3">
+                    <input type="number" id="tamano-texto" class="form-control" placeholder="Tamaño del texto (ej. 16)">
+                    <button id="btn-tamano" class="btn btn-primary">Aplicar Tamaño</button>
+                </div>
+
                 <hr class="hr">
 
                 <h2>Opciones de Formato</h2>
@@ -32,6 +44,11 @@
                     <div class="col-12 col-md-4 my-1">
                         <button id="btn-subrayado" class="btn d-block w-100 btn-primary" data-formato="subrayado">
                             Underline (Subrayado)
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-4 my-1">
+                        <button id="btn-fuente" class="btn d-block w-100 btn-primary" data-formato="cambiarfuente">
+                            Change Font (Cambair Fuente)
                         </button>
                     </div>
                 </div>
@@ -123,7 +140,18 @@
             }
         }
 
+        function actualizarTexto() {
+            const nuevoTexto = document.getElementById('nuevo-texto').value;
+            const texto = document.getElementById('texto');
+            texto.textContent = nuevoTexto;
+        }
+
+        function aplicarTamano() {
+            const nuevoTamano = document.getElementById('tamano-texto').value;
+            const texto = document.getElementById('texto');
+            texto.style.fontSize = nuevoTamano + 'px';
+        }
+
         document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
-    </script>
-</body>
-</html>
+        document.getElementById('btn-actualizar').addEventListener('click', actualizarTexto)
+        document.getElementById('btn-tamano').addEventListener('click', aplicarTamano);
